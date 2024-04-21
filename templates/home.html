@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microblog</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar__navegacao">
+            <img class="navbar__logo" src="../static/logo.svg" alt="logo_do_microblog"> Microblog
+        </div>
+        <ul class="navbar__navigancion">
+            <li class="navbar__navegacao-itens"><a href="#" class="navbar__link">Recentes</a></li>
+            <li class="navbar__navegacao-itens"><a href="#" class="navbar__link">Calendario</a></li>
+        </ul>
+    </header>
+    <main class="main">
+        <section>
+            <h1>Adicinar nova entrada</h1>
+            <form class="formulario" method="POST">
+                <p class="entrada__formulario">
+                    <label for="entrada" class="rotulo__formulario">Conteudo de entrada:</label>
+                    <textarea name="conteudo" id="entrada" class="formulario__textarea"></textarea>
+                    <button class="submit" type="submit">enviar</button>
+                </p>
+            </form>
+        </section>
+        <section>
+            <h1>Postagens recentes</h1>
+            {% for entrada in entradas %}
+                <article class="entrada">
+                    <div>
+                        <h2 class="entrada__titulo">{{ entrada[0] | truncate(30, true) }}</h2>
+                        <time class="entrada__data" datetime="{{ entrada[1] }}">• {{ entrada[2] }}</time>
+                    </div>
+                    <p class="entrada__texto">
+                        {{ entrada[0] }}
+                    </p>
+                </article>
+            {% endfor %}
+        </section>
+    </main>
+    <footer class="rodape">
+        <div class="conteudo__rodape">
+            <section class="esquerda">
+                <a class="itens__rodape"> Feito por Célio Junior</a>
+                <a class="itens__rodape"> Confira meus outros projetos</a>
+            </section>
+            <section class="direita">
+                <div class="colunas__rodape">
+                    <a class="itens__rodape" href="#"> Recentes</a>
+                    <a class="itens__rodape" href="#"> Calendario</a>
+                </div>
+                <div class="colunas__rodape">
+                    <a class="itens__rodape" href="#"> Sobre</a>
+                    <a class="itens__rodape" href="#">Como isso foi feito</a>
+                </div>
+            </section>
+        </div>
+    </footer>
+</body>
+
+</html>

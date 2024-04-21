@@ -1,0 +1,149 @@
+html {
+    font-family: Lato, sans-serif;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.navbar {
+    max-height: 640px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 24px;
+}
+
+.navbar__navegacao {
+    display: flex;
+    align-items: center;
+
+}
+
+.navbar__logo {
+    margin-right: 30px;
+}
+
+.navbar__navigancion {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    color: #5c6b70;
+}
+
+.navbar__navegacao-itens {
+    margin-left: 50px;
+}
+
+.navbar__link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.entrada__formulario {
+    width: 100%;
+}
+
+.rotulo__formulario {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.formulario__textarea {
+    width: inherit;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    background-color: #f3f6f6;
+    margin-bottom: 10px;
+}
+
+.submit {
+    background-color: #3cd0ff;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 5px 30px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+.submit:hover{
+    background-color: #18c1e1;
+}
+.entrada {
+    margin-top: 50px;
+}
+.entrada__titulo {
+    display: inline;
+    font-size: 18px;
+}
+
+.entrada__data {
+    color: #5c6b70; 
+}
+.entrada__texto {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.rodape {
+    background-color: #323f43;
+    padding: 40px 0;
+    margin: 50px 0 0 0;
+    margin-top: 50px;
+    border-top: 4px solid black;
+    color: white;
+    font-size: 12px;
+}
+.conteudo__rodape {
+    max-width: 640px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+.rodape .esquerda{
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+}
+.rodape .direita {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+}
+.colunas__rodape {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+.itens__rodape {
+    margin-bottom: 5px;
+    color: inherit;
+    text-decoration: none;
+}
+.itens__rodape:hover{
+    text-decoration: underline;
+}
